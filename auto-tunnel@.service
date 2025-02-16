@@ -1,0 +1,15 @@
+[Unit]
+Description=Maintain Auto SSH Tunnel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/auto-tunnel.sh %i
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
+

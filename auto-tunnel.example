@@ -1,0 +1,43 @@
+{
+  "mappings": {
+    "1": {
+      "type": "R",
+      "local_host": "192.168.2.201",
+      "local_port": "3389",
+      "remote_port": "3389"
+    },
+    "2": {
+      "type": "R",
+      "local_host": "localhost",
+      "local_port": "22",
+      "remote_port": "2022"
+    },
+    "3": {
+      "type": "R",
+      "bind_host": "0.0.0.0",
+      "local_host": "localhost",
+      "local_port": "22",
+      "remote_port": "5022"
+    },
+    "4": {
+      "type": "L",
+      "bind_host": "*",
+      "local_host": "172.40.0.10",
+      "local_port": "514",
+      "remote_port": "514"
+    },
+    "5": {
+      "type": "L",
+      "bind_host": "*",
+      "local_host": "localhost",
+      "local_port": "5001",
+      "remote_port": "55001"
+    }
+  },
+  "ssh_user": "tunneler",
+  "ssh_server": "my.example.com",
+  "ssh_port": "22",
+  "server_alive_interval": 10,
+  "server_alive_count_max": 3
+}
+

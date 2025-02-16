@@ -1,0 +1,9 @@
+Package: auto-tunnel
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: bash, systemd, autossh
+Maintainer: feci <feci2048@gmail.com>
+Description: Auto-tunnel systemd service
+ Installs a systemd service and script to manage auto-ssh operations.

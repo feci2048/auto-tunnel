@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Stop and disable all active instances of auto-tunnel@
+for instance in $(systemctl list-units --type=service --all | grep -o 'auto-tunnel@[^\s]*'); do
+    systemctl stop "$instance" || true
+    systemctl disable "$instance" || true
+done
+
+# Reload systemd configuration
+systemctl daemon-reload
+
